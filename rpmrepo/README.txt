@@ -9,6 +9,7 @@ To add the repo to a target system, add the rpm repo host's ip to below and run 
 echo -e "[test-repo]
 name=Local test repo
 baseurl=http://<BUILD MACHINE IP HERE>:8000
+gpgcheck=0
 enabled=1" | sudo tee -a /etc/yum.repos.d/test.repo; sudo chmod 644 /etc/yum.repos.d/test.repo
 
 dnf clean all
